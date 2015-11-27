@@ -3,8 +3,8 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 ready = ->
-  loadUrls()
-  setInterval(loadUrls, 15000)
+  #loadUrls()
+  #setInterval(loadUrls, 15000)
 
 loadUrls = ->
   $("#urls").load("urls/load")

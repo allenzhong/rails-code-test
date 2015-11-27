@@ -1,5 +1,10 @@
 class UrlsController < ApplicationController
   def index
+    @urls = Url.all.order(created_at: :desc)
+    respond_to do |format|
+      format.html
+      format.json {render json: @urls}
+    end
   end
 
   # this action is only for synchronizing urls from db
@@ -10,13 +15,10 @@ class UrlsController < ApplicationController
 
   def create
     @url = Url.new(url_params)
-
     respond_to do |format|
-       if @url.save
-         format.js
-       else
-         format.js
-       end
+      if @url.save
+        format.json {render json: @url}
+      end
     end
   end
 
