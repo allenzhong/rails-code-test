@@ -43,14 +43,13 @@
           <h2>Rails Code Test</h2>
         </div>
 
-        <form>
-        <dl class="form full">
-          <dt><label for="url">WebSite URL</label></dt>
-          <dd><input id="url" type="url" placeholder="please type a valid URL" />
-          </dd>
-        </dl>
-        </form>
-
+        <%= form_for(Url.new,remote:true) do |f| %>
+          <dl class="form full">
+             <dt><label for="url">WebSite URL</label></dt>
+             <dd><%= f.text_field :url, placeholder: "http://", html: {type: "url"}%>
+             </dd>
+          </dl>
+        <% end %>
         <div id="urls" class="call-to-signup">
         </div>
       </div>

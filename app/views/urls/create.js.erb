@@ -1,0 +1,4 @@
+<% if @url.valid? %>
+    $("#urls").prepend("<%=j render @url%>")
+<% end  %>
+$("form").trigger("reset")
