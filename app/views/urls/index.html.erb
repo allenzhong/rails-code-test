@@ -18,7 +18,7 @@
           <h2>Rails Code Test</h2>
         </div>
 
-        <%= form_for(Url.new,remote:true) do |f| %>
+        <%= form_for(Url.new) do |f| %>
           <dl class="form full">
              <dt><label for="url">WebSite URL</label></dt>
              <dd><%= f.text_field :url, placeholder: "http://", html: {type: "url"}%>
