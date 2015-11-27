@@ -54,7 +54,7 @@ $(function () {
       e.preventDefault();
     });
     function validateUrl(url){
-      var regx = /^(https?:\/\/)?([\da-z\.-]+)(\.[a-z\.]{2,6})([\/\w \.-]*)*\/?$/;
+      var regx = /^(https?:\/\/)?([\da-z\.-]+)(\.[a-z\.]{2,6})[\/\w \.-]*\/?$/;
       var array = regx.exec(url);
       return array;
     }
